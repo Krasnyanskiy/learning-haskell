@@ -8,4 +8,4 @@
 -}
 
 addTwoElements :: a -> a -> [a] -> [a]
-addTwoElements = undefined
+addTwoElements a0 a1 arr = a0 : a1 : arr
