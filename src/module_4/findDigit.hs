@@ -25,4 +25,9 @@ findDigit xs = helper xs where
 	    s find {x => isDigit(x)}
 	  }
 	}
+
+	or
+
+	def findDigit(s: String) = s find isDigit
+
 -}
