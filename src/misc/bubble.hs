@@ -26,9 +26,9 @@ sort xs = let
 -- {v2}
 
 sort :: (Eq a, Ord a) => [a] -> [a]
-sort xs = iterate f' xs !! length xs
+sort xs = iterate helper xs !! length xs
     where
-        f' (x:y:xs) | x < y     = y : f' (x:xs) 
-                    | otherwise = x : f' (y:xs)
-        f' a = a               
+        helper (x:y:xs) | x < y     = y : helper (x:xs) 
+                        | otherwise = x : helper (y:xs)
+        helper a = a          
                
