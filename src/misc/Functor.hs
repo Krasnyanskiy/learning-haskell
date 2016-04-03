@@ -13,6 +13,10 @@ instance Functor [] where
     fmap = map
 
 
+instance Functor Maybe where
+    fmap _ Nothing  = Nothing
+    fmap f (Just a) = Just (f a)
+
 {-
 	fmap Just [1,2,3]
 
